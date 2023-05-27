@@ -94,12 +94,14 @@
       color: white;
     }
 
-    .double-block a{
+    .double-block a, .fa{
       display:inline-block;      
     }
+
     .mt a, .mt{
       margin-top: 20px;
     }
+
     .mb a, .mb{
       margin-bottom: 0px;
     }    
@@ -110,11 +112,11 @@
 <body>
   <div class="container">
     <!-- 左边的内容 -->
-    <div class="box left-box">
+    <div class="box">
       <div class="search-engines">
         <div class="double-block mb">
           <a class="link" href="https://chat.readlamp.love/" target="_blank">MyGPT</a>
-          <a class="none" href="https://nb.ashuichat.top" target="_blank">GPT4.0</a>
+          <a class="none" href="https://nb.ashuichat.top" target="_blank">AShuiGPT 2.0</a>
           <a class="none" href="https://ashui.rcouyi.com/" target="_blank">AShuiGPT</a>
         </div>
 
@@ -150,8 +152,10 @@
 
   <footer>
     <p>最近更新：<font>2023年5月27日</font></p>
-    <p><a class="none" href="https://github.com/ReadLamp/AisWorker/blob/main/index.html" target="_blank">GitHub 链接</a></p>
+    <a class="none fa" href="https://github.com/ReadLamp/AisWorker/" target="_blank">GitHub 链接</a>
+    <a class="none fa" id="copy-link" target="_blank">Git 克隆命令</a>
   </footer>
+
 
   <script>
     function openSearchEngines() {
@@ -171,6 +175,19 @@
         }
       });
     });
+
+    const copyLink = document.querySelector("#copy-link");
+      copyLink.addEventListener("click", async () => {
+        try {
+          const textToCopy = "git clone https://github.com/ReadLamp/AisWorker.git";
+          await navigator.clipboard.writeText(textToCopy);
+          console.log("Copied to clipboard:", textToCopy);
+          alert('克隆命令已复制到剪切板');
+        } catch (err) {
+          console.error("Failed to copy:", err);
+        }
+      });
+
   </script>
 </body>
 
