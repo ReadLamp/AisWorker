@@ -31,7 +31,7 @@ body {
 .link {
   display: block;
   margin: 20px auto;
-  width: 200px;
+  width: 180px;
   height: 40px;
   line-height: 40px;
   font-size: 20px;
@@ -60,7 +60,7 @@ body {
 .none {
   display: block;
   margin: 20px auto;
-  width: 200px;
+  width: 180px;
   height: 40px;
   line-height: 40px;
   font-size: 20px;
